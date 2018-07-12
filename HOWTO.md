@@ -13,7 +13,7 @@ C:\Users\eric_huang\AppData\Local\Programs\Python\Python36-32\Lib\site-packages\
 
 ### create django project in Pycharm, 
 	a)Working Directory, D:\pycharm_project\mydjangoproject
-	b)create project the existing files and code
+	b)create project from the existing files and code
 	c)PyCharm settings(File->settings->project:current project name->Project Interpreter) set Interpreter
 
 
