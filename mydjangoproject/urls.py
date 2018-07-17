@@ -16,9 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from sign import views
+# re_path replace url method for Backwards Compatibility
+from django.urls import re_path
 
 urlpatterns = [
+    # django 1.11 url style
+    # url(r'^$', views.index),
+    re_path(r'^$', views.index),
     path('test/', include('mytest.urls')),
     path('index/', views.index),
+    path('login_action', views.login_action),
+    path('event_manage/', views.event_manage),
+    path('accounts/login/',views.index),
     path('admin/', admin.site.urls),
 ]

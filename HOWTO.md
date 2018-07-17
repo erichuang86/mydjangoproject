@@ -9,6 +9,12 @@ C:\Users\eric_huang\AppData\Local\Programs\Python\Python36-32\Lib\site-packages\
 	b) D:\pycharm_project>django-admin startproject mydjangoproject
 	c) D:\pycharm_project\mydjangoproject\mydjangoproject>django-admin startapp mytest
 	d) D:\pycharm_project\mydjangoproject>python manage.py migrate
+	e) D:\pycharm_project\mydjangoproject>python manage.py createsuperuser
+        Username (leave blank to use 'eric_huang'): admin
+        Email address: eric_huang@trendmicro.com
+        Password:
+        Password (again):
+        Superuser created successfully.
 \*Note: DO NOT use myapp as app name, otherwise report module not found error.\*
 
 ### create django project in Pycharm, 
