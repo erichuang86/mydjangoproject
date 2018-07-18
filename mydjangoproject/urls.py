@@ -29,4 +29,5 @@ urlpatterns = [
     path('event_manage/', views.event_manage),
     path('accounts/login/',views.index),
     path('admin/', admin.site.urls),
+    path('search_name/', views.search_name)
 ]
