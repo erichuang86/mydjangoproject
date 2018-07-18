@@ -15,6 +15,8 @@ C:\Users\eric_huang\AppData\Local\Programs\Python\Python36-32\Lib\site-packages\
         Password:
         Password (again):
         Superuser created successfully.
+    f) D:\NewDateAfter20180326\code_git\python_project\mydjangoproject>python manage.py makemigrations sign
+	   D:\NewDateAfter20180326\code_git\python_project\mydjangoproject>python manage.py migrate
 \*Note: DO NOT use myapp as app name, otherwise report module not found error.\*
 
 ### create django project in Pycharm, 
