@@ -29,5 +29,7 @@ urlpatterns = [
     path('event_manage/', views.event_manage),
     path('accounts/login/',views.index),
     path('admin/', admin.site.urls),
-    path('search_name/', views.search_name)
+    path('search_name/', views.search_name),
+    path('guest_manage/', views.guest_manage),
+    path('search_phone/', views.search_phone)
 ]
