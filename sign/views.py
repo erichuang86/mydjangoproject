@@ -84,5 +84,5 @@ def search_phone(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
         contacts = paginator.page(paginator.num_pages)
     return render(request, "guest_manage.html", {"user": username,
-                                                 "guests": guests,
+                                                 "guests": contacts,
                                                  "phone": search_phone})

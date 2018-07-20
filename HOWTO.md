@@ -23,6 +23,7 @@ C:\Users\eric_huang\AppData\Local\Programs\Python\Python36-32\Lib\site-packages\
        <QuerySet [<Event: DevOps site release conf>]>
        >>> Guest.objects.all()
        <QuerySet [<Guest: jack>]>
+    e) D:\NewDateAfter20180326\code_git\python_project\mydjangoproject>pip install django-bootstrap3
 \*Note: DO NOT use myapp as app name, otherwise report module not found error.\*
 
 ### create django project in Pycharm, 
