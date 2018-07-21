@@ -23,7 +23,18 @@ C:\Users\eric_huang\AppData\Local\Programs\Python\Python36-32\Lib\site-packages\
        <QuerySet [<Event: DevOps site release conf>]>
        >>> Guest.objects.all()
        <QuerySet [<Guest: jack>]>
-    e) D:\NewDateAfter20180326\code_git\python_project\mydjangoproject>pip install django-bootstrap3
+    h) D:\NewDateAfter20180326\code_git\python_project\mydjangoproject>pip install django-bootstrap3
+    i) D:\pycharm_project\mydjangoproject>python manage.py shell
+        Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
+        Type "help", "copyright", "credits" or "license" for more information.
+        (InteractiveConsole)
+        >>> from django.test.utils import setup_test_environment
+        >>> setup_test_environment()
+        >>> from django.test import Client
+        >>> c = Client()
+        >>> response = c.get('/index/')
+        >>> response.status_code
+        200
 \*Note: DO NOT use myapp as app name, otherwise report module not found error.\*
 
 ### create django project in Pycharm, 
