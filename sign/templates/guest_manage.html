@@ -1,13 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    {% load bootstrap3 %}
-    {% bootstrap_css %}
-    {% bootstrap_javascript %}
-    <title>Guest Manage</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
     <!-- 导航栏 -->
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -16,7 +9,7 @@
           </div>
           <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="/event_manage/">Release</a></li>
+              <li><a href="/event_manage/">Event</a></li>
               <li class="active"><a href="#about">Guest</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -27,6 +20,7 @@
         </div>
       </nav>
 
+      <div class="container theme-showcase" role="main">
                <!--发布会表单-->
         <div class="page-header" style="margin-top: 80px;">
           <!-- 搜索功能-->
@@ -48,12 +42,12 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>id</th>
-                  <th>realname</th>
-                  <th>phone</th>
+                  <th>ID</th>
+                  <th>Realname</th>
+                  <th>Phone</th>
                   <th>Email</th>
-                  <th>sign</th>
-                  <th>event</th>
+                  <th>Sign</th>
+                  <th>Event</th>
                 </tr>
               </thead>
               <tbody>
@@ -94,6 +88,6 @@
           </ul>
         </span>
       </div>
+      </div>
 
-</body>
-</html>
+{% endblock %}

@@ -25,11 +25,16 @@ urlpatterns = [
     re_path(r'^$', views.index),
     path('test/', include('mytest.urls')),
     path('index/', views.index),
-    path('login_action', views.login_action),
+    path('login_action/', views.login_action),
     path('event_manage/', views.event_manage),
     path('accounts/login/',views.index),
     path('admin/', admin.site.urls),
     path('search_name/', views.search_name),
     path('guest_manage/', views.guest_manage),
-    path('search_phone/', views.search_phone)
+    path('search_phone/', views.search_phone),
+    re_path(r'^sign_index/(?P<eid>[0-9]+)/$', views.sign_index),
+    re_path(r'^sign_index_action/(?P<eid>[0-9]+)/$', views.sign_index_action),
+    path('logout/', views.logout),
+    path('add_guest/', views.add_guest),
+    path('add_event/', views.add_event)
 ]

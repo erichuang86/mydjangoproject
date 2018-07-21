@@ -1,17 +1,24 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-    <title>Django Page</title>
-</head>
-<body>
- <h1>Release Management</h1>
- <form method="post" action="/login_action">
-     <input name="username" type="text" placeholder="username" > <br>
-     <input name="password" type="password" placeholder="password"> <br>
-     {{ error }} <br>
-     <button id="btn" type="sumit">Log in</button>
-     {% csrf_token %}
- </form>
-</body>
+
+  <head>
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+  </head>
+
+  <body>
+    <div class="container" style="width: 330px;">
+      <form class="form-signin" method="post" action="/login_action/">
+          <h2 class="form-signin-heading">Guest System</h2>
+            <label for="inputUsername" class="sr-only">Username</label>
+              <input name="username" type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+              <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <p style="color:red">{{error}}</p> <br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+          {% csrf_token %}
+      </form>
+    </div>
+  </body>
+
 </html>

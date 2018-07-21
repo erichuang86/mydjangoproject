@@ -1,13 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    {% load bootstrap3 %}
-    {% bootstrap_css %}
-    {% bootstrap_javascript %}
-    <title>Event Manage Page</title>
-</head>
-<body role="document">
+{% extends "base.html" %}
+{% block content %}
     <!-- 导航栏 -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -16,7 +8,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Release</a></li>
+            <li class="active"><a href="#">Event</a></li>
             <li><a href="/guest_manage/">Guest</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -27,12 +19,13 @@
       </div>
     </nav>
 
+<div class="container theme-showcase" role="main">
           <!--查询发布会-->
       <div class="page-header" style="margin-top: 80px;">
         <div id="navbar" class="navbar-collapse collapse" style="float:left;">
           <form class="navbar-form" method="get" action="/search_name/">
             <div class="form-group">
-              <input name="name" type="text" placeholder="name" class="form-control">
+              <input name="name" type="text" placeholder="Name" class="form-control">
             </div>
             <button type="submit" class="btn btn-success">Search</button>
           </form>
@@ -45,16 +38,17 @@
 
 
       <!--发布会表单-->
-      <div class="row" style="padding-top: 80px;">
-        <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6" style="width: 900px;">
           <table class="table table-striped">
             <thead>
               <tr>
-                <th>id</th>
-                <th>name</th>
-                <th>status</th>
-                <th>address</th>
-                <th>start_time</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Address</th>
+                <th>Start Time</th>
+                <th>Sign</th>
               </tr>
             </thead>
             <tbody>
@@ -65,6 +59,9 @@
                   <td>{{ event.status }}</td>
                   <td>{{ event.address }}</td>
                   <td>{{ event.start_time }}</td>
+                  <td>
+                    <a href="/sign_index/{{ event.id }}/" target="{{ event.id }}_blank">sign</a>
+                  </td>
                 </tr>
              {% endfor %}
              {{ hint }}
@@ -73,5 +70,5 @@
         </div>
 
       </div>
-</body>
-</html>
+</div>
+{% endblock %}
