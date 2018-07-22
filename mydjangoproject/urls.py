@@ -23,6 +23,7 @@ urlpatterns = [
     # django 1.11 url style
     # url(r'^$', views.index),
     re_path(r'^$', views.index),
+    #path('', views.index),
     path('test/', include('mytest.urls')),
     path('index/', views.index),
     path('login_action/', views.login_action),
@@ -34,7 +35,11 @@ urlpatterns = [
     path('search_phone/', views.search_phone),
     re_path(r'^sign_index/(?P<eid>[0-9]+)/$', views.sign_index),
     re_path(r'^sign_index_action/(?P<eid>[0-9]+)/$', views.sign_index_action),
+    #path('sign_index/<int:eid>/', views.sign_index),
+    #path('sign_index2/<int:eid>/', views.sign_index2),
+    #path('sign_index_action/<int:eid>/', views.sign_index_action),
     path('logout/', views.logout),
     path('add_guest/', views.add_guest),
-    path('add_event/', views.add_event)
+    path('add_event/', views.add_event),
+    path('api/', include('sign.urls')),
 ]
