@@ -10,6 +10,11 @@ class AESGetEventListTest(unittest.TestCase):
     def setUp(self):
         # 字符串自动补全16倍数
         BS = 16
+        # 将需要填充的个数(6)转换成字符('\x06')
+        # ‘1234567890’-> '1234567890\x06\x06\x06\x06\x06\x06'
+        # 求余运算符(%)的优先级高于减号(-)，
+        # 16 - 19 % 16 -> 13, 原始字符串为19个， 需填充13个， 共32个
+        # 16 - 3 % 16 -> 13， 原始字符串为3个，需填充13个， 共16个
         self.pad = lambda s: s + (BS - len(s) % BS) * chr(BS - len(s) % BS)
 
         self.base_url = "http://127.0.0.1:8000/api/sec_get_guest_list/"
